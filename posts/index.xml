@@ -1,20 +1,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Posts on fragrant Blog</title>
-        <link>blog.251.wiki/posts/</link>
+        <link>https://blog.251.wiki/posts/</link>
         <description>Recent content in Posts on fragrant Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
         <lastBuildDate>Fri, 08 Mar 2019 14:11:19 +0000</lastBuildDate>
-        <atom:link href="blog.251.wiki/posts/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://blog.251.wiki/posts/index.xml" rel="self" type="application/rss+xml" />
         
         <item>
             <title>php反序列化</title>
-            <link>blog.251.wiki/posts/php-unserialize/</link>
+            <link>https://blog.251.wiki/posts/php-unserialize/</link>
             <pubDate>Fri, 08 Mar 2019 14:11:19 +0000</pubDate>
             
-            <guid>blog.251.wiki/posts/php-unserialize/</guid>
+            <guid>https://blog.251.wiki/posts/php-unserialize/</guid>
             <description>序列化 想要理解反序列化，那么必须先了解下序列化。序列化简单来说就是将对象数据转换成一种可逆的数据结构来持久化存放或传输的形式。简单的一个例子就是将一个类中的成员变量值转换为字符串形式来持久化的保存变量的值。
 注：序列化只保存类名和类中的变量以及变量对应的值，而不会保存类中的方法。
 在php中使用serialize()函数来实现序列化。
