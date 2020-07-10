@@ -215,7 +215,7 @@ class test1{ public $t1 = &#34;123456&#34;; } $a1 = new test1(); $a2 = serialize
 <p>想要理解反序列化，那么必须先了解下序列化。序列化简单来说就是将对象数据转换成一种可逆的数据结构来持久化存放或传输的形式。简单的一个例子就是将一个类中的成员变量值转换为字符串形式来持久化的保存变量的值。</p>
 <p>注：序列化只保存类名和类中的变量以及变量对应的值，而不会保存类中的方法。</p>
 <p>在php中使用serialize()函数来实现序列化。</p>
-<p><img src="https://cdn.nlark.com/yuque/0/2020/png/920312/1594262159072-660b719f-ef67-4a7a-9e5f-5fabaa7a2084.png" alt="img"></p>
+<p><img src="https://blog-1300356561.cos.ap-guangzhou.myqcloud.com/unserialize/20200710103535.png" alt="img"></p>
 <p>序列化的常见格式：对象，JSON，字符串，数组，XML等形式。</p>
 <p>一个简单的例子，定义一个test的类，然后添加一个成员变量t1，实例化对象然后将其序列化之后输出到页面上。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">class test{
@@ -263,7 +263,7 @@ $a2 = serialize($a1);
 echo $a2;
 $a3 = unserialize($a2);
 var_dump($a3);
-</code></pre></div><p><img src="https://cdn.nlark.com/yuque/0/2020/png/920312/1594106228409-58ec076b-c027-4188-8aa4-4a96be4092dd.png" alt="img"></p>
+</code></pre></div><p><img src="https://blog-1300356561.cos.ap-guangzhou.myqcloud.com/unserialize/20200710103707.png" alt="img"></p>
 <p>那么问题来了，反序列化漏洞到底是什么情况？当一个对象被序列化或者是反序列化时，在php序列化的不同步骤下，php会自动去检测对应的魔术方法，如果存在对应的魔术方法，那么就会执行该方法内对应的代码。</p>
 <p>来看一个反序列化中常见的魔术方法 __wakeup()，这个方法会在反序列化时自动去调用。</p>
 <p>基于上面的代码增加一个wakeup方法，先实例化test类然后将其反序列化。当变量A的内容被反序列之后会自动触发__wakeup，输出t1变量的值和wakeup。</p>
@@ -280,7 +280,7 @@ var_dump($a3);
 $a = new test();
 $b = serialize($a);
 $c = unserialize($b);
-</code></pre></div><p><img src="https://cdn.nlark.com/yuque/0/2020/png/920312/1594105294246-80f8f048-a34a-4f1a-88fc-c3e54e83849d.png" alt="img"></p>
+</code></pre></div><p><img src="https://blog-1300356561.cos.ap-guangzhou.myqcloud.com/unserialize/20200710103749.png" alt="img"></p>
 <p>那么如果反序列化的内容是可控的，同时存在魔术方法并会进入到一些危险的函数执行操作的话，那么就可以通过构造反序列化的内容覆盖掉原变量的内容，形成反序列漏洞。</p>
 <p>一个简单的例子，基于上面的代码稍微改动下，通过GET方式获取传进来的内容然后直接反序列化。__destruct方法会在反序列化完毕之后被自动调用。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">error_reporting(0);
@@ -308,7 +308,7 @@ $b = serialize($a);
 echo $b;
 
 O:5:&#34;test1&#34;:1:{s:2:&#34;t1&#34;;s:10:&#34;phpinfo();&#34;;}
-</code></pre></div><p><img src="https://cdn.nlark.com/yuque/0/2020/png/920312/1594106856009-84a124a8-a363-43ac-bb37-1b75d0b15a92.png" alt="img"></p>
+</code></pre></div><p><img src="https://blog-1300356561.cos.ap-guangzhou.myqcloud.com/unserialize/20200710103839.png" alt="img"></p>
 <p>简单总结下反序列化漏洞，反序列化的内容可控，结合魔术方法中存在的危险代码通过构造反序列化的内容覆盖掉原本的内容，进入到危险代码中执行。反序列化漏洞的危害取决于相关魔术方法内的代码。</p>
 <h3 id="php中常见的魔术方法">php中常见的魔术方法</h3>
 <p>更多方法参考php官方手册，以下方法可自行尝试。</p>
