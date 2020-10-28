@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>入獄小技巧 on 葉落無聲</title>
-    <link>http://ye557.github.io/tags/%E5%85%A5%E7%8D%84%E5%B0%8F%E6%8A%80%E5%B7%A7/</link>
+    <link>https://ye557.github.io/tags/%E5%85%A5%E7%8D%84%E5%B0%8F%E6%8A%80%E5%B7%A7/</link>
     <description>Recent content in 入獄小技巧 on 葉落無聲</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Tue, 25 Jun 2019 14:17:16 +0000</lastBuildDate>
     
-	<atom:link href="http://ye557.github.io/tags/%E5%85%A5%E7%8D%84%E5%B0%8F%E6%8A%80%E5%B7%A7/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ye557.github.io/tags/%E5%85%A5%E7%8D%84%E5%B0%8F%E6%8A%80%E5%B7%A7/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Navicat的HTTP代理隧道</title>
-      <link>http://ye557.github.io/posts/navicathttp/</link>
+      <link>https://ye557.github.io/posts/navicathttp/</link>
       <pubDate>Tue, 25 Jun 2019 14:17:16 +0000</pubDate>
       
-      <guid>http://ye557.github.io/posts/navicathttp/</guid>
+      <guid>https://ye557.github.io/posts/navicathttp/</guid>
       <description>&lt;p&gt;有個朋友給我發了壹個官網，跟我說壹套源碼賣兩萬塊錢，問我能不能幫忙搞壹份源碼。&lt;/p&gt;
 &lt;p&gt;前期初步做了探測，框架debug沒關直接把數據庫賬號密碼顯示出來，地址為內網地址無法直接連接數據庫去寫shell或者提權，簡單看了看，通過某處拿了壹個shell。&lt;/p&gt;</description>
     </item>
