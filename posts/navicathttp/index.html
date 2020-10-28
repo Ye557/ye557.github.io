@@ -8,11 +8,13 @@
 	
 	
 	
-	<title>关于我 ｜ 葉落無聲</title>
+	<title>Navicat的HTTP代理隧道 ｜ 葉落無聲</title>
 	
     
     
-    <meta name="description" content="本來無壹物,何處惹塵埃." />
+    <meta name="description" content="有個朋友給我發了壹個官網，跟我說壹套源碼賣兩萬塊錢，問我能不能幫忙搞壹份源碼。
+前期初步做了探測，框架debug沒關直接把數據庫賬號密碼顯示出來，地址為內網地址無法直接連接數據庫去寫shell或者提權，簡單看了看，通過某處拿了壹個shell。
+" />
     
 
     
@@ -101,12 +103,37 @@
             <div class="post_page">
                 <div class="post animate__animated animate__fadeInDown">
                     <div class="post_title post_detail_title">
-                        <h2><a href='/about/'>关于我</a></h2>
-                        <span class="date">2015.03.21</span>
+                        <h2><a href='/posts/navicathttp/'>Navicat的HTTP代理隧道</a></h2>
+                        <span class="date">2019.06.25</span>
                     </div>
-                    <div class="post_content markdown"><p>本來無壹物,何處惹塵埃.</p>
-</div>
+                    <div class="post_content markdown"><p>有個朋友給我發了壹個官網，跟我說壹套源碼賣兩萬塊錢，問我能不能幫忙搞壹份源碼。</p>
+<p>前期初步做了探測，框架debug沒關直接把數據庫賬號密碼顯示出來，地址為內網地址無法直接連接數據庫去寫shell或者提權，簡單看了看，通過某處拿了壹個shell。</p>
+<p><img src="https://image-1258136479.cos.ap-guangzhou.myqcloud.com/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/sadddd.jpg" alt=""></p>
+<p>對本機簡單收集了下信息，發現這個網站用到的服務還是蠻多的，而且都做了分離放在內網的其他機器上，mysql和redis存在內網的另外兩個服務器上，本機權限為服務用戶，雙網卡。網站用的寶塔和阿裏雲的服務器，服務器權限做得特別死，而系統版本是ubuntu18.04，內核是4.15.0-42-generic，權限為www。</p>
+<p>壹般看到內核版本比較高的服務器我就懶得去提權了，因為我的目標是源碼和數據庫，感覺演示站的數據庫應該不是很大，把源碼打包下載之後，用php寫了壹個簡單的腳本去連接mysql服務器導出數據，數據量比預想的要大很多，導出了壹小部分就報錯了。</p>
+<p>回到桌面準備放個歌看到navicat，突然想起了navicat的http代理功能,在navicat的安裝目錄下有三個php文件，對應三種數據庫，通過上傳壹個php腳本做代理轉發，連接到內網的服務器。</p>
+<p>不過想要使用這個功能有個前提是妳要先拿到壹個webshell，對目錄就寫入的權限，而這個功能僅支持postgresql,sqlite以及mysql三種數據庫。</p>
+<p><img src="https://image-1258136479.cos.ap-guangzhou.myqcloud.com/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/asdlaskdjlasd.png" alt=""></p>
+<p>上傳到網站根目錄之後，可以直接訪問這個文件，可以看到會自動檢測可用函數和php的版本，填入IP和賬號密碼連接，如果顯示Connection Success！即可以連接到目標數據庫。</p>
+<p><img src="https://image-1258136479.cos.ap-guangzhou.myqcloud.com/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/13546513.png" alt=""></p>
+<p>然後打開Navicat新建壹個連接，選擇http選選項卡，勾選使用http通道和用base64編碼傳出查詢。</p>
+<p><img src="https://image-1258136479.cos.ap-guangzhou.myqcloud.com/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/sakdnlasdk.png" alt=""></p>
+<p>然後直接填入內網的IP地址和賬號密碼點擊登錄。當然妳可以先點壹下測試連接看看是不是能連通。</p>
+<p><img src="https://image-1258136479.cos.ap-guangzhou.myqcloud.com/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/assssssdsad.png" alt=""></p>
+<p>成功連上數據庫，脫下來審計之後發現洞真不少。</p>
+<p><img src="https://image-1258136479.cos.ap-guangzhou.myqcloud.com/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/2019627151222dama.png" alt=""></p></div>
                     <div class="post_footer">
+                        
+                        <div class="meta">
+                            <div class="info">
+                                <span class="field tags">
+                                    <i class="ri-stack-line"></i>
+                                    
+                                    <a href="http://ye557.github.io/tags/%E5%85%A5%E7%8D%84%E5%B0%8F%E6%8A%80%E5%B7%A7/">入獄小技巧</a>
+                                    
+                                </span>
+                            </div>
+                        </div>
                         
                     </div>
                 </div>

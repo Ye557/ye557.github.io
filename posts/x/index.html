@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="H20" />
+	
+	
+	
+	<title>應急響應培訓筆記 ｜ 葉落無聲</title>
+	
+    
+    
+    <meta name="description" content="公司讓去參加某集團的應急培訓訓練營&amp;hellip;&amp;hellip;.
+" />
+    
+
+    
+    
+    <meta name="keywords" content="Hugo, theme, zozo" />
+    
+
+	
+    
+    <link rel="shortcut icon" href="http://localhost:1313/images/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="http://localhost:1313/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="http://localhost:1313/css/zozo.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="http://localhost:1313/css/highlight.css" />
+
+    
+    
+</head>
+
+<body>
+    <div class="main animate__animated animate__fadeInDown">
+        <div class="nav_container animated fadeInDown">
+    <div class="site_nav" id="site_nav">
+        <ul>
+            
+            <li>
+                <a href="/">Home</a>
+            </li>
+            
+            <li>
+                <a href="/posts/">Archive</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="menu_icon">
+        <a id="menu_icon"><i class="ri-menu-line"></i></a>
+    </div>
+</div>
+        <div class="header animated fadeInDown">
+    <div class="site_title_container">
+        <div class="site_title">
+            <h1>
+                <a href="http://localhost:1313/">
+                    <span>葉落無聲</span>
+                </a>
+            </h1>
+        </div>
+        <div class="description">
+            <p class="sub_title"></p>
+            <div class="my_socials">
+                
+                
+                <a href="%20" title="facebook" target="_blank"><i class="ri-facebook-fill"></i></a>
+                
+                
+                
+                <a href="%20" title="github" target="_blank"><i class="ri-github-fill"></i></a>
+                
+                
+                
+                <a href="%20" title="instagram" target="_blank"><i class="ri-instagram-fill"></i></a>
+                
+                
+                
+                <a href="%20" title="twitter" target="_blank"><i class="ri-twitter-fill"></i></a>
+                
+                
+                
+                <a href="%20" title="weibo" target="_blank"><i class="ri-weibo-fill"></i></a>
+                
+                
+                <a href="http://localhost:1313/index.xml" type="application/rss+xml" title="rss" target="_blank"><i
+                        class="ri-rss-fill"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="content">
+            <div class="post_page">
+                <div class="post animate__animated animate__fadeInDown">
+                    <div class="post_title post_detail_title">
+                        <h2><a href='/posts/x/'>應急響應培訓筆記</a></h2>
+                        <span class="date">2020.10.13</span>
+                    </div>
+                    <div class="post_content markdown"><p>公司讓去參加某集團的應急培訓訓練營&hellip;&hellip;.</p>
+<h2 id="應急響應流程">應急響應流程</h2>
+<p>事件狀態判斷&ndash;&gt;臨時處置&ndash;&gt;信息收集分析&ndash;&gt;事件處置&ndash;&gt;事件防禦</p>
+<h2 id="windows應急">windows應急</h2>
+<h3 id="常見命令">常見命令</h3>
+<p>註冊表</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">regedit
+</code></pre></div><p>任務管理器</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">taskmgr
+</code></pre></div><p>系統配置</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">msconfig
+</code></pre></div><p>事件查看器</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">eventvwr.msc
+</code></pre></div><p>計算機管理</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">compmgmt
+</code></pre></div><p>本地組策略</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">gpedit.msc
+</code></pre></div><p>本地用戶和組</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">lusrmgr.msc
+</code></pre></div><p>計劃任務</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">taskschd.msc
+</code></pre></div><h3 id="net命令">NET命令</h3>
+<p>net user 獲取本地所有用戶</p>
+<p>net localgroup administrators 查看本地管理員組賬號</p>
+<p>net session 當前會話</p>
+<p>net start 	系統啟動服務</p>
+<p>net use 查看遠程連接</p>
+<p>net share 查看當前用戶共享</p>
+<h3 id="windows隱藏賬戶">windows隱藏賬戶</h3>
+<p>添加隱藏賬戶:</p>
+<div class="highlight"><pre class="chroma"><code class="language-cmake" data-lang="cmake"><span class="err">net</span> <span class="err">user</span> <span class="err">test$</span> <span class="err">password</span> <span class="err">/add
+</span></code></pre></div><p>添加隱藏賬戶後無法通過 <code>net user</code>在命令行上查看到，但可以通過<code>net user test$ </code>的方式查看.也可以在計算機管理中的用戶中看到隱藏賬號，或者是通過SAM</p>
+<p><img src="https://blog-1300356561.cos.ap-guangzhou.myqcloud.com/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94%E7%AC%94%E8%AE%B0/20201013211216.png" alt=""></p>
+<h3 id="網絡和系統信息">網絡和系統信息</h3>
+<p>查看本機的網絡鏈接：</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">netstat -ano
+</code></pre></div><p>查看操作系統詳細配置信息</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">systeminfo
+</code></pre></div><p>很多時候只需要查看所有回顯的壹部分內容，在windows中可以通過<code>findstr</code>來過濾信息</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">netstat -ano | findstr 1433 //查看是否開放1433端口
+systeminfo | grep &#39;KB&#39; //查看系統補丁信息
+</code></pre></div><p>獲取系統的進程信息，可以通過WMIC來獲取.</p>
+<p>直接獲取顯示會很亂，可以直接把結果輸出成txt，或是先運行<code>wmic</code>進入cil再獲取進程信息。
+<img src="https://blog-1300356561.cos.ap-guangzhou.myqcloud.com/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94%E7%AC%94%E8%AE%B0/20201013211459.png" alt=""></p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">wmic process
+</code></pre></div><h3 id="文件屬性">文件屬性</h3>
+<p>windows可以使用<code>attrib</code>命令來查看文件屬性</p>
+<ul>
+<li>A 代表存檔屬性</li>
+<li>R 代表只讀屬性</li>
+<li>S 系統文件屬性</li>
+<li>H 隱藏文件屬性</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">attrib 文件名
+</code></pre></div><p><code>attrib</code>可以通過<code>+屬性</code>或者是&rsquo;-屬性'來添加或者移除文件屬性，<code>+</code>增加屬性,<code>-</code>移除屬性，使用<code>+H</code>可隱藏文件</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">C:<span class="se">\U</span>sers<span class="se">\t</span>est<span class="se">\D</span>esktop<span class="se">\t</span>est&gt;attrib +H dzs.txt
+</code></pre></div><h3 id="計算文件md5">計算文件MD5</h3>
+<p>windows可通過<code>certutil</code>命令來計算文件的MD5值</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">certutil -hashfile 文件名 MD5
+
+MD5 hash of .\test.txt:
+c6162a83049ae65a86bbc874db64ef93
+CertUtil: -hashfile command completed successfully.
+</code></pre></div><h3 id="關鍵目錄日誌文件">關鍵目錄&amp;日誌文件</h3>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">%WINDIR%
+%WINDIR%/SYSTEM32
+%TEMP%
+%LOCALAPOPDATA%
+%APPDATA%
+</code></pre></div><p>在windows中有三種日誌，分別是: <code>系統日誌</code>，<code>安全日誌</code>和<code>應用程序日誌</code></p>
+<p>系統日誌：主要記錄系統組件，驅動程序運行時和崩潰時，以及數據丟失情況等信息</p>
+<p>安全日誌：主要記錄與系統安全相關的事件，例如系統資源的使用，策略更改，用戶的登錄和登出等情況，查看安全日誌用戶必須擁有系統管理員權限。</p>
+<p>應用程序：記錄程序運行時所產生的信息，壹般指windows和第三方開發軟件，如記錄第三方軟件的日誌信息，如果想在事件查看器中查看到第三方軟件的日誌信息，那麽這個軟件必須使用windows的日誌函數。</p>
+<p>windows日誌全部存放在<code>C:\Windows\System32\winevt\Logs\</code>目錄下,日誌的後綴為<code>.evtx</code></p>
+<p>系統日誌的文件名為：<code>System.evtx</code></p>
+<p>安全日誌的文件名為：<code>Security.evtx</code></p>
+<p>應用程序的文件名為：<code>Application.evtx</code></p>
+<p>如果想查看windows日誌，可以通過<code>開始菜單-&gt;管理工具-&gt;事件查看器-&gt;windows日誌</code>或是通過命令行使用<code>eventvwr</code>打開事件查看器</p>
+<p>這三種日誌中，比較著重關註的是系統日誌和安全日誌，攻擊者可能在攻陷設備後關閉系統的日誌記錄，或者是在服務器上登錄，添加或是刪除服務器上的用戶，關閉或者是開關機都會產生相應的日誌事件</p>
+<p>系統日誌常見事件：</p>
+<p>​	· 系統啟動  12</p>
+<p>​	· 系統關閉  13</p>
+<p>​	· 日誌服務啟動  6005</p>
+<p>​	· 日誌服務關閉  6006</p>
+<p>安全日誌常見事件：</p>
+<p>​	· 清除日誌事件   1102</p>
+<p>​	· 賬號登錄成功	4624</p>
+<p>​	· 賬號登錄失敗	4625</p>
+<p>​	· 創建賬號	4720</p>
+<p>​	· 刪除賬號	4726</p></div>
+                    <div class="post_footer">
+                        
+                    </div>
+                </div>
+                
+                
+                <div class="doc_comments"></div>
+                
+            </div>
+        </div>
+    </div>
+    <a id="back_to_top" href="#" class="back_to_top"><i class="ri-arrow-up-s-line"></i></a>
+    <footer class="footer">
+    <div class="powered_by">
+        <a href="https://varkai.com">Designed by VarKai,</a>
+        <a href="http://www.gohugo.io/">Proudly published with Hugo</a>
+    </div>
+
+    <div class="footer_slogan">
+        <span></span>
+    </div>
+</footer>
+    <script src="http://localhost:1313/js/jquery-3.5.1.min.js"></script>
+<link href="http://localhost:1313/css/fancybox.min.css" rel="stylesheet">
+<script src="http://localhost:1313/js/fancybox.min.js"></script>
+<script src="http://localhost:1313/js/zozo.js"></script>
+
+
+<script type="text/javascript" async
+    src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\[\[', '\]\]']],
+                processEscapes: true,
+                processEnvironments: true,
+                skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+                TeX: {
+                    equationNumbers: { autoNumber: "AMS" },
+                    extensions: ["AMSmath.js", "AMSsymbols.js"]
+                }
+            }
+        });
+
+        MathJax.Hub.Queue(function () {
+            
+            
+            
+            var all = MathJax.Hub.getAllJax(), i;
+            for (i = 0; i < all.length; i += 1) {
+                all[i].SourceElement().parentNode.className += ' has-jax';
+            }
+        });
+    </script>
+
+<style>
+    code.has-jax {
+        font: inherit;
+        font-size: 100%;
+        background: inherit;
+        border: inherit;
+        color: #515151;
+    }
+</style>
+
+
+
+</body>
+
+</html>
