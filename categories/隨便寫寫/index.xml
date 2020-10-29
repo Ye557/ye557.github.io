@@ -2,40 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>隨便寫寫 on 葉落無聲</title>
-    <link>http://y.ygl.plus/categories/%E9%9A%A8%E4%BE%BF%E5%AF%AB%E5%AF%AB/</link>
+    <link>https://y.ygl.plus/categories/%E9%9A%A8%E4%BE%BF%E5%AF%AB%E5%AF%AB/</link>
     <description>Recent content in 隨便寫寫 on 葉落無聲</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Wed, 28 Oct 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://y.ygl.plus/categories/%E9%9A%A8%E4%BE%BF%E5%AF%AB%E5%AF%AB/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://y.ygl.plus/categories/%E9%9A%A8%E4%BE%BF%E5%AF%AB%E5%AF%AB/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>記壹道簡單的CTF題目</title>
-      <link>http://y.ygl.plus/posts/%E8%AE%B0%E4%B8%80%E9%81%93ctf%E9%A2%98%E7%9B%AE/</link>
+      <link>https://y.ygl.plus/posts/%E8%AE%B0%E4%B8%80%E9%81%93ctf%E9%A2%98%E7%9B%AE/</link>
       <pubDate>Wed, 28 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://y.ygl.plus/posts/%E8%AE%B0%E4%B8%80%E9%81%93ctf%E9%A2%98%E7%9B%AE/</guid>
+      <guid>https://y.ygl.plus/posts/%E8%AE%B0%E4%B8%80%E9%81%93ctf%E9%A2%98%E7%9B%AE/</guid>
       <description>幫忙看的壹道題，沒啥難度，水壹篇，直接訪問地址直接顯示圖片和源代碼。 前面是兩個函數的定義，直接拉到最下面查看最開始執行的代碼，GET接收壹個action參數的值賦值給$action變量，然後去判斷值是</description>
     </item>
     
     <item>
       <title>繞過Mod_Security進行註入</title>
-      <link>http://y.ygl.plus/posts/%E7%BB%95%E8%BF%87mod_security%E8%BF%9B%E8%A1%8C%E6%B3%A8%E5%85%A5/</link>
+      <link>https://y.ygl.plus/posts/%E7%BB%95%E8%BF%87mod_security%E8%BF%9B%E8%A1%8C%E6%B3%A8%E5%85%A5/</link>
       <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://y.ygl.plus/posts/%E7%BB%95%E8%BF%87mod_security%E8%BF%9B%E8%A1%8C%E6%B3%A8%E5%85%A5/</guid>
+      <guid>https://y.ygl.plus/posts/%E7%BB%95%E8%BF%87mod_security%E8%BF%9B%E8%A1%8C%E6%B3%A8%E5%85%A5/</guid>
       <description>&lt;p&gt;mod_security是壹個開源入侵檢查和攔截的引擎，主要作用於web程序，也就是常說的waf。
 mod_security被編寫成壹個模塊，可以在apache加載使用，通過反向代理等代理模式檢查壹些入侵行為，如註入，爆破等操作。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Navicat的HTTP代理隧道</title>
-      <link>http://y.ygl.plus/posts/navicathttp/</link>
+      <link>https://y.ygl.plus/posts/navicathttp/</link>
       <pubDate>Tue, 25 Jun 2019 14:17:16 +0000</pubDate>
       
-      <guid>http://y.ygl.plus/posts/navicathttp/</guid>
+      <guid>https://y.ygl.plus/posts/navicathttp/</guid>
       <description>&lt;p&gt;有個朋友給我發了壹個官網，跟我說壹套源碼賣兩萬塊錢，問我能不能幫忙搞壹份源碼。&lt;/p&gt;
 &lt;p&gt;前期初步做了探測，框架debug沒關直接把數據庫賬號密碼顯示出來，地址為內網地址無法直接連接數據庫去寫shell或者提權，簡單看了看，通過某處拿了壹個shell。&lt;/p&gt;</description>
     </item>
